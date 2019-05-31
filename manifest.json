@@ -2,8 +2,8 @@
 	"files": {
 		"LICENSE": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2",
 		"README.md": "c3a3694aa77127a2ef21d0e8628f9c8766a25c4b15f3e028d290cfda84587210",
-		"config/abnormalities.js": "2607011e99f6e5c5b7e0d4dc26f012f978db86924fea28533e193df6e9abd7c0",
-    	"config/ep.json": "5be8427a1f71b610b34b96ce2ee4c17610873c15878fbf051aefd7c5cac37c8d",
+		"config/abnormalities.js": "80f6645b473b5ad79204e84cb44ff0ecf958b2225fcad999b461a93569ba4ab9",
+		"config/ep.json": "5be8427a1f71b610b34b96ce2ee4c17610873c15878fbf051aefd7c5cac37c8d",
     	"config/passivity.json": "fd2c300c092fd2337a7ab6b0bd574286c29da495ddbbe71b263ad4308c54fdc7",
 		"config/silence.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     	"config/skills.js": "bc7bafdfe0be06f9f221b026e5e24745e879fb85d92b5c96d3609c2cd0437254",
