@@ -3,7 +3,7 @@ module.exports = {
 	105100: true, // Aerial Scythe
 
 	/* Slayer */
-	//23220: true, // Distant Blade (duration)
+	23220: true, // Distant Blade
 	// Savage Strike
 	301600: true,
 	301601: true,

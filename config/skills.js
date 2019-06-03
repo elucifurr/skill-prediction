@@ -77,7 +77,7 @@ module.exports = {
 			0: true
 		},
 		13: { // Retaliate
-			0: { noRetry: true }
+			0: false
 		},
 		16: { // Charging Slash
 			'*': { noInterrupt: [2, 10, 22, 29, 30, 32, 37, 38, 40, 41] },
@@ -377,7 +377,7 @@ module.exports = {
 			30: true
 		},
 		11: { // Retaliate
-			0: { noRetry: true }
+			0: false
 		},
 		12: { // Infuriate
 			0: true
@@ -601,7 +601,7 @@ module.exports = {
 			0: true
 		},
 		10: { // Retaliate
-			0: { noRetry: true }
+			0: false
 		},
 		12: { // Heart Thrust
 			'*': {
@@ -867,7 +867,7 @@ module.exports = {
 			0: true
 		},
 		13: { // Retaliate
-			0: { noRetry: true }
+			0: false
 		},
 		15: { // Vampiric Blow
 			0: {
@@ -899,10 +899,12 @@ module.exports = {
 				noInterrupt: [1, 4, 6, 13, 18, 24, 25, 26, 27, 28, 29, 31, 34, 35, 36, 37],
 				chains: {
 					// Correct
-					/*3: 30,
+					/*
+					3: 30,
 					10: 30,
 					11: 30,
-					15: 30*/
+					15: 30
+					*/
 
 					// Workaround: C_CANCEL_SKILL is not emulated properly for charging skills (TODO)
 					'3-10': 30,
@@ -1161,7 +1163,7 @@ module.exports = {
 			}
 		},
 		14: { // Retaliate
-			0: { noRetry: true }
+			0: false
 		},
 		16: { // Painblast
 			0: true
@@ -1244,6 +1246,7 @@ module.exports = {
 				cooldownEnd: 300,
 				noRetry: true,
 				abnormals: {
+					425103: { disableSkill: true },
 					501323: { disableSkill: true }, 
 					400801: { disableSkill: true },
 					301900: { disableSkill: true } 
@@ -1399,7 +1402,7 @@ module.exports = {
 			0: true
 		},
 		14: { // Retaliate
-			0: { noRetry: true }
+			0: false
 		},
 		15: { // Incendiary Trap
 			0: true
@@ -1616,7 +1619,7 @@ module.exports = {
 			0: { abnormals: { 805800: { disableSkill: true } } }
 		},
 		25: { // Retaliate
-			0: { noRetry: true }
+			0: false
 		},
 		26: { // Fiery Escape
 			0: {
@@ -1856,6 +1859,7 @@ module.exports = {
 				cooldownEnd: 300,
 				noRetry: true,
 				abnormals: {
+					425103: { disableSkill: true },
 					501323: { disableSkill: true }, 
 					400801: { disableSkill: true },
 					301900: { disableSkill: true } 
@@ -1877,7 +1881,7 @@ module.exports = {
 			}
 		},
 		21: { // Retaliate
-			0: { noRetry: true }
+			0: false
 		},
 		22: { // Arun's Tears
 			0: {
@@ -2005,7 +2009,8 @@ module.exports = {
 			0: {
 				noInterrupt: [17],
 				cooldownEnd: 300,
-				noRetry: true
+				noRetry: true,
+				abnormals: { 425103: { disableSkill: true } }
 			}
 		},
 		45: { // Thrall Augmentation
@@ -2465,7 +2470,7 @@ module.exports = {
 			31: true
 		},
 		14: { // Retaliate
-			0: { noRetry: true }
+			0: false
 		},
 		15: { // Retribution
 			30: { fixedSpeed: true },
@@ -2504,12 +2509,14 @@ module.exports = {
 			},
 			30: true
 		},
-		/*20: { // Cable Step
+		/* Does not work correctly
+		20: { // Cable Step
 			0: {
 				type: 'dynamicDistance',
-				length: 1250
+				abnormals: { 425103: { disableSkill: true } }
 			}
-		},*/
+		},
+		*/
 		21: { // Recall Scythes
 			'*': { requiredBuff: 10151221 },
 			0: {
@@ -3142,7 +3149,7 @@ module.exports = {
 			}
 		},
 		20: { // Retaliate
-			0: { noRetry: true }
+			0: false
 		},
 		40: { // Rolling Reload / Dashing Reload
 			'*': {
@@ -3523,7 +3530,7 @@ module.exports = {
 			30: true
 		},
 		12: { // Retaliate
-			0: { noRetry: true }
+			0: false
 		},
 		13: { // Provoke
 			'*': { fixedSpeed: true },
@@ -3764,7 +3771,7 @@ module.exports = {
 			}
 		},
 		10: { // Retaliate
-			0: { noRetry: true }
+			0: false
 		},
 		11: { // Focus
 			'*': { noInterrupt: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23] },
@@ -4096,10 +4103,13 @@ module.exports = {
 			30: true
 		},
 		17: { // Balder's Tears
-			0: { fixedSpeed: true }
+		0: { 
+			fixedSpeed: true,
+			abnormals: { 425103: { disableSkill: true } }
+		 }
 		},
 		18: { // Retaliate
-			0: { noRetry: true }
+			0: false
 		},
 		19: { // Reclamation
 			'*': { 
