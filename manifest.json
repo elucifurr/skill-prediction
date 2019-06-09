@@ -13,7 +13,7 @@
    		"lib/abnormalities.js": "55c5c56f647d8d53f0bc00640f3b718d36e218592bf7503f9878cd55fa15d66f",
 		"lib/commands.js": "88ad8919eb166a7cd0cba4aae9a3c2981219f45f486f97a4ec63d4ef48feb095",
 		"lib/cooldowns.js": "1db5baba6f865f7dd40b4a42942d7c49b71ce948b0e7bb94d9fb6b023f095054",
-		"lib/core.js": "f627c08a23c47cdfd8f5138c6560d5362b911d38038d81dd9c6c92df8b6e67a9",
+    	"lib/core.js": "0baf91bfed74f399cfce894172c74f89f97e31dae51dc93333675dc2c4e1a8ec",
 		"lib/debug.js": "8512e5e460a6c4028664ca1d1b76460171a8e1185a9850967520f4faab6990f4",
 		"lib/index.js": "e05a8ae39c55da05d9a02bca25ccd38b851a4a0a0ce2df2f60080f378e655923",
 		"lib/ping.js": "c1fe8271d6e81e66e4b8b2d38c24dc273725c8286a5e068e5bef61aebd1a7126",
