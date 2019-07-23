@@ -513,7 +513,10 @@ module.exports = {
 			3: true
 		},
 		2: { // Knockdown Strike
-			'*': { abnormals: { 23070: { speed: 1.25 } } },
+			'*': { 
+				consumeAbnormal: 23220,
+				abnormals: { 23070: { speed: 1.25 } }
+			},
 			1: true,
 			2: { 
 				noInterrupt: [1, 2, 3, 4, 6, 8, 9, 10, 12, 13, 15, 16, 17, 18, 21, 22, 23, 24, 25, 26, 28],
@@ -522,21 +525,21 @@ module.exports = {
 			30: true
 		},
 		3: { // Whirlwind
-			'*': { abnormals: { 23080: { speed: 1.25 } } },
+			'*': { 
+				abnormals: { 
+					23080: { speed: 1.25 },
+					301150: { speed: 0.20 } // Todo: fix something that i shouldn't talk about...
+				}
+
+			},
 			0: true,
 			1: true,
-			2: { 
-				chains: {
-					2: 30,
-					4: 30,
-					8: 30,
-					12: 30,
-					23: 30,
-					24: 30,
-					26: 30,
-					27: 30,
-					28: 30
-				}
+			2: {
+				interruptAllWithAbnormal: { 301604: 3 },
+				noInterrupt: [1, 2, 3, 4, 6, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 21, 22, 23, 24, 25, 26, 27, 28], // 28-0 should be valid, any other ids not
+				abnormals: { 301604: { chain: 30 } },
+				chains: { 27: 30 },
+				
 			},
 			30: { requiredBuff: 301604 }
 		},
@@ -608,23 +611,16 @@ module.exports = {
 				abnormals: {
 					23060: { speed: 1.25 },
 					23061: { speed: 1.35 }
-				}
+				},
+				consumeAbnormalEnd: [23060, 23061],
 			},
 			0: true,
 			1: true,
-			2: { 
-				chains: {
-					2: 30,
-					3: 30,
-					4: 30,
-					8: 30,
-					12: 30,
-					23: 30,
-					24: 30,
-					26: 30,
-					27: 30,
-					28: 30
-				}
+			2: {
+				interruptAllWithAbnormal: { 301604: 12 },
+				noInterrupt: [1, 2, 3, 4, 6, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 21, 22, 23, 24, 25, 26, 27, 28], // 28-0 should be valid, any other ids not
+				abnormals: { 301604: { chain: 30 } },
+				chains: { 27: 30 },
 			},
 			30: { requiredBuff: 301604 }
 		},
@@ -717,19 +713,21 @@ module.exports = {
 			30: true
 		},
 		26: { // Punishing Blow
-			'*': {
-				noInterrupt: [1, 2, 3, 4, 6, 9, 10, 12, 13, 14, 15, 16, 17, 21, 22, 26, 28],
-				hasChains: true
-			},
 			0: {
-				categoryChains: {
-					3023: 30,
-					3024: 30,
-					3027: 30,
-					3099: 30
+				length: [1078, 2166, 120],
+				distance: [40.51, 122.33, 11.21],
+				interruptAllWithAbnormal: { 301604: 26 },
+				noInterrupt: [1, 2, 3, 4, 6, 9, 10, 12, 13, 14, 15, 16, 17, 18, 21, 22, 26, 28], // 28-0 should be valid, any other ids not
+				abnormals: { 301604: { chain: 30 } },
+				chains: {
+					8: 30,
+					23: 30,
+					24: 30,
+					25: 30,
+					27: 30
 				}
 			},
-			30: { consumeAbnormal: 301604 }
+			30: true
 		},
 		27: { // Savage Strike
 			'*': {
@@ -803,7 +801,7 @@ module.exports = {
 		},
 		4: { // Flatten
 			0: {
-				noInterrupt: ['3-10', '3-11', '3-12', '3-13', 4, '10-10', '10-11', '10-12', 11, '10-13', '15-10', '15-11', '15-12', '15-13', '15-14', '18-10', '18-11', '18-12', '18-13', 24, 26, 28, 29, '32-0'],
+				noInterrupt: [1, 2, '3-10', '3-11', '3-12', '3-13', 4, '10-10', '10-11', '10-12', 11, '10-13', '15-10', '15-11', '15-12', '15-13', '15-14', '18-10', '18-11', '18-12', '18-13', 24, 26, 28, 29, '32-0'],
 				chains: {
 					6: 30,
 					25: 30,
@@ -892,11 +890,11 @@ module.exports = {
 		16: { // Fearsome Shout / Titanic Shout
 			0: { fixedSpeed: true },
 			10: { fixedSpeed: true },
-			20: true
+			20: { cooldownEnd: 300 }
 		},
 		18: { // Lethal Strike
 			0: {
-				noInterrupt: [1, 4, 6, 13, 18, 24, 25, 26, 27, 28, 29, 31, 34, 35, 36, 37],
+				noInterrupt: [1, 2, 4, 6, 13, 18, 24, 25, 26, 27, 28, 29, 31, 34, 35, 36, 37],
 				chains: {
 					// Correct
 					/*
@@ -905,7 +903,6 @@ module.exports = {
 					11: 30,
 					15: 30
 					*/
-
 					// Workaround: C_CANCEL_SKILL is not emulated properly for charging skills (TODO)
 					'3-10': 30,
 					'3-11': 30,
@@ -949,8 +946,8 @@ module.exports = {
 			13: true
 		},
 		25: { // Raze
-			0: {
-				noInterrupt: [4, 6, '6-30', 11, '18-10', '18-11', '18-12', '18-13', 24, 26, 28, 29, '32-0'],
+			0: { // TODO: ADD Axe block cancel
+				noInterrupt: [2, 4, 6, '6-30', 11, '18-10', '18-11', '18-12', '18-13', 24, 26, 28, 29, '32-0', 34, 35, 36, 37],
 				chains: {
 					1: 30,
 					3: 30,
@@ -986,7 +983,7 @@ module.exports = {
 		},
 		27: { // Unbreakable
 			0: {
-				noInterrupt: [1, '3-10', '3-11', '3-12', '3-13', 4, 6, '8-30', '10-10', '10-11', '10-12', '10-13', 11, 13, '15-10', '15-11', '15-12', '15-13', '15-14', 18, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33],
+				noInterrupt: [1, 2, '3-10', '3-11', '3-12', '3-13', 4, 6, '8-30', '10-10', '10-11', '10-12', '10-13', 11, 13, '15-10', '15-11', '15-12', '15-13', '15-14', 18, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33],
 				interruptibleWithAbnormal: { 401705: 33 }
 			},
 			30: true
@@ -1080,7 +1077,7 @@ module.exports = {
 		},
 		37: { // Unleash: Beast Fury
 			'*': {
-				noInterrupt: [37],
+				noInterrupt: [16, 37],
 				requiredBuff: 401705
 			},
 			0: {
