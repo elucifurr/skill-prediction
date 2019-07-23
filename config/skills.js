@@ -578,11 +578,12 @@ module.exports = {
 		    }
 			}
 		},
-		/*
 		8: { // Overhand Strike
-			'*': { hasChains: true },
 			0: {
-				noInterrupt: ['1-0', '1-1', '1-2', 4, 6, 8, 10, '14-0', '14-1', 17, 25],
+				length: 3375.7,
+				interruptAllWithAbnormal: { 301604: null },
+				noInterrupt: ["1-0", "1-1", "1-2", 4, 6, 8, 10, "14-0", "14-1", 17, 18, 21, 23, 25, 26, 28],
+				abnormals: { 301604: { chain: 30 } },
 				chains: {
 					1: 30,
 					2: 30,
@@ -594,12 +595,11 @@ module.exports = {
 					15: 30,
 					16: 30,
 					24: 30,
-					27: 30 // Workaround - TODO: Emulate abnormal 301604
+					27: 30
 				}
 			},
 			30: true
 		},
-		*/
 		9: { // Leaping Strike
 			0: true
 		},
