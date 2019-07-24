@@ -578,11 +578,12 @@ module.exports = {
 		    }
 			}
 		},
-		/*
 		8: { // Overhand Strike
-			'*': { hasChains: true },
 			0: {
-				noInterrupt: ['1-0', '1-1', '1-2', 4, 6, 8, 10, '14-0', '14-1', 17, 25],
+				length: 3375.7,
+				interruptAllWithAbnormal: { 301604: null },
+				noInterrupt: ["1-0", "1-1", "1-2", 4, 6, 8, 10, "14-0", "14-1", 17, 18, 21, 23, 25, 26, 28],
+				abnormals: { 301604: { chain: 30 } },
 				chains: {
 					1: 30,
 					2: 30,
@@ -594,12 +595,11 @@ module.exports = {
 					15: 30,
 					16: 30,
 					24: 30,
-					27: 30 // Workaround - TODO: Emulate abnormal 301604
+					27: 30
 				}
 			},
 			30: true
 		},
-		*/
 		9: { // Leaping Strike
 			0: true
 		},
@@ -681,23 +681,28 @@ module.exports = {
 			0: true
 		},
 		23: { // Measured Slice
-			'*': { hasChains: true },
 			0: {
-				noInterrupt: [1, 2, 3, 4, 6, 9, 12, 13, 15, 17, 22, 23],
-				categoryChains: {
-					3008: 30,
-					3024: 30,
-					3025: 30,
-					3026: 30,
-					3027: 30 // Workaround - TODO: Emulate abnormal 301604
+				length: 3691.25,
+				interruptAllWithAbnormal: { 301604: 23 },
+				noInterrupt: [1, 2, 3, 4, 6, 9, 10, 12, 13, 14, 15, 16, 17, 18, 21, 22, 23, 28], // 28-0 should be valid, any other ids not
+				abnormals: { 301604: { chain: 30 } },
+				chains: {
+					8: 30,
+					24: 30,
+					25: 30,
+					26: 30,
+					27: 30
 				}
 			},
 			30: true
  		},
 		24: { // Eviscerate
-			'*': { hasChains: true },
 			0: {
-				noInterrupt: ['1-0', '1-1', '1-2', 4, 6, 14, 16, 17, 22, 24, 26],
+				length: 1941,
+				distance: 50,
+				interruptAllWithAbnormal: { 301604: 24 },
+				noInterrupt: ["1-0", "1-1", "1-2", 4, 6, 10, 14, 16, 17, 18, 21, 22, 23, 24, 26, 28], // 28-0 should be valid, any other ids not
+				abnormals: { 301604: { chain: 30 } },
 				chains: {
 					1: 30,
 					2: 30,
@@ -707,7 +712,8 @@ module.exports = {
 					12: 30,
 					13: 30,
 					15: 30,
-					25: 30
+					25: 30,
+					27: 30
 				}
 			},
 			30: true
