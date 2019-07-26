@@ -1874,6 +1874,7 @@ module.exports = {
 			0: {
 				chargeLevels: [10, 10],
 				noInterrupt: [18],
+				noRetry: true,
 				//autoRelease: 0,
 				abnormals: {
 					27070: { chargeSpeed: 0.25 },
@@ -1890,6 +1891,7 @@ module.exports = {
 		22: { // Arun's Tears
 			0: {
 				chargeLevels: [10, 10],
+				noRetry: true,
 				//autoRelease: 0,
 				abnormals: {
 					27100: { chargeSpeed: 0.25 }
