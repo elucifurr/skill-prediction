@@ -1470,7 +1470,10 @@ module.exports = {
 				noInterrupt: [34],
 				stamina: 150,
 				instantStamina: true,
-				abnormals: { 602107: { stamina: -30 } },
+				abnormals: { 
+					602107: { stamina: -30 },
+					602222: { stamina: -40 }
+				},
 				noRetry: true
 			},
 			0: {
