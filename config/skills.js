@@ -1521,6 +1521,7 @@ module.exports = {
 		}
 	},
 	6: { // Priest
+		"*": { consumeAbnormal: 806104 },
 		1: { // Divine Radiance
 			"*": { noInterrupt: [1] },
 			0: true,
