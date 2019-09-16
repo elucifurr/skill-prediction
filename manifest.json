@@ -2,11 +2,11 @@
 	"files": {
 		"LICENSE": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2",
 		"README.md": "c3a3694aa77127a2ef21d0e8628f9c8766a25c4b15f3e028d290cfda84587210",
-		"config/abnormalities.js": "9185f05879bbc71d71994cc30e00040649f42f4f583ec7f6d8a9cb07145aa14c",
+		"config/abnormalities.js": "1d12b726c10f7ce8e9cb13a34566da6b96381e0a03acf7c331b8aa201012c368",
 		"config/ep.json": "5be8427a1f71b610b34b96ce2ee4c17610873c15878fbf051aefd7c5cac37c8d",
 		"config/passivity.json": "fd2c300c092fd2337a7ab6b0bd574286c29da495ddbbe71b263ad4308c54fdc7",
 		"config/silence.json": "db40463be3a4713e9ee97b51074cd6ab589b28500dd5028c59e17647eb0785e1",
-		"config/skills.js": "dd12978e50f7f00db161179692f94718f8a9a7d4693b6e545d86d2d2c99e08f9",
+		"config/skills.js": "8903bff530e5c49dcbaa06d3429af9653fcf2d18b482c6ce50fbbf3a1d4770dc",
 		"config/skills_client.json": "b0746f11711f29ffbc06386eb7c815537b56d959112a58d7e2fd416399e9804f",
 		"lib/abnormalities.js": "cd4195728c6f57b0d55a4b85368512d7bdf99c8693d0c891d7233a82218df645",
 		"lib/commands.js": "88ad8919eb166a7cd0cba4aae9a3c2981219f45f486f97a4ec63d4ef48feb095",

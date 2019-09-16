@@ -2486,7 +2486,7 @@ module.exports = {
 		},
 		11: { // Shadow Lash
 			'*': {
-				noInterrupt: [19],
+				noInterrupt: [1, 3, 4, 5, 6, 8, 9, 10, "11-3", 12, 13, 14, 15, 18, 19, 20, 21, 23, 40],
 				noRetry: true
 			},
 			0: { triggerAbnormal: { 10151040: 2000 } },
@@ -2510,10 +2510,19 @@ module.exports = {
 			81: true
 		},
 		16: { // Shadow Reaping
-			0: { fixedSpeed: true }
+			0: { 
+				fixedSpeed: true,
+				noInterrupt: [16],
+			}
 		},
 		19: { // Dark Harvest
 			'*': {
+				triggerAbnormal: { 
+					10151250: 3000,
+					10151230: 10000
+				},
+				requiredBuff: 10151220,
+				consumeAbnormalEnd: 10151230,
 				inPlace: {
 					animSeq: [{
 						duration: 2122,
@@ -2525,19 +2534,10 @@ module.exports = {
 				}
 			},
 			0: {
-				noInterrupt: [21],
-				requiredBuff: 10151220,
+				noInterrupt: [1, 3, 6, 8, 9, 10, 11, 12, 13, 14, 19, 21, 23, 40],
 				chains: {
-					1: 30,
-					3: 30,
 					4: 30,
-					5: 30,
-					6: 30,
-					8: 30,
-					9: 30,
-					10: 30,
-					11: 30,
-					12: 30
+					5: 30
 				}
 			},
 			30: true
@@ -2553,18 +2553,10 @@ module.exports = {
 		21: { // Recall Scythes
 			'*': { requiredBuff: 10151221 },
 			0: {
-				noInterrupt: [21],
+				noInterrupt: [1, 3, 6, 8, 9, 10, 11, 12, 13, 14, 15, 19, 20, 21, 23, 40],
 				chains: {
-					1: 30,
-					3: 30,
 					4: 30,
-					5: 30,
-					6: 30,
-					8: 30,
-					9: 30,
-					10: 30,
-					11: 30,
-					12: 30
+					5: 30
 				}
 			},
 			30: true
@@ -2592,7 +2584,7 @@ module.exports = {
 		1: { // Blast
 			'*': {
 				fixedSpeed: true,
-				noInterrupt: [1],
+				noInterrupt: [1, 20],
 				projectiles: [20],
 				triggerAbnormal: { 10152011: 3100 },
 				hasChains: true

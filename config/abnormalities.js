@@ -16,6 +16,10 @@ module.exports = {
 	10151022: true,
 	10151023: true,
 
+	// Dark Harvest
+	10151250: true, // stuff thingy
+	10151230: true, // effect thingy
+
 	/* Gunner */
 	10152010: true, // Time Bomb (soft chain)
 	10152011: true, // Blast (soft chain)
