@@ -6,7 +6,7 @@
 		"config/ep.json": "5be8427a1f71b610b34b96ce2ee4c17610873c15878fbf051aefd7c5cac37c8d",
 		"config/passivity.json": "fd2c300c092fd2337a7ab6b0bd574286c29da495ddbbe71b263ad4308c54fdc7",
 		"config/silence.json": "db40463be3a4713e9ee97b51074cd6ab589b28500dd5028c59e17647eb0785e1",
-		"config/skills.js": "8903bff530e5c49dcbaa06d3429af9653fcf2d18b482c6ce50fbbf3a1d4770dc",
+		"config/skills.js": "1e4a25e321fc502b348f2481377dde2e6ff24d42f386f1cf4ac67f462cea3f9b",
 		"config/skills_client.json": "b0746f11711f29ffbc06386eb7c815537b56d959112a58d7e2fd416399e9804f",
 		"lib/abnormalities.js": "cd4195728c6f57b0d55a4b85368512d7bdf99c8693d0c891d7233a82218df645",
 		"lib/commands.js": "88ad8919eb166a7cd0cba4aae9a3c2981219f45f486f97a4ec63d4ef48feb095",
