@@ -1574,7 +1574,8 @@ module.exports = {
 			"*": { triggerAbnormal: { 806104: 1480 } },
 			0: true,
 			1: true,
-			2: true
+			2: true,
+			80: false
 		},
 		12: { // Resurrect
 			0: {
@@ -4100,7 +4101,8 @@ module.exports = {
 			},
 			1: { categoryChains: { 750: 31 } },
 			30: true,
-			31: true
+			31: true,
+			80: false
 		},
 		12: { // Ragnarok
 			'*': {
