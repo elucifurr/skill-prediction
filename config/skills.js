@@ -1856,7 +1856,9 @@ module.exports = {
 				}
 			}
 		},
-		11: false, //fix horse 118000
+		11: { // Summon: Group
+			0: true
+		},
 		12: { // Vow of Rebirth
 			'*': { noRetry: true },
 			0: {
