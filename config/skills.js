@@ -1810,7 +1810,19 @@ module.exports = {
 				type: 'lockon',
 				fixedSpeed: true
 			},
-			10: { type: 'lockonCast' }
+			10: {
+				type: 'lockonCast',
+				level: {
+					29: { // Velocity
+						fixedSpeed: true,
+						cooldownEnd: 100 // Workaround: Fixes ghosting while on CD - TODO: Enable global cooldown checks
+					},
+					30: { // Downfall
+						fixedSpeed: true,
+						cooldownEnd: 100 // Workaround: Fixes ghosting while on CD - TODO: Enable global cooldown checks
+					}
+				}
+			}
 		},
 		6: { // Shara's Lash
 			0: true
