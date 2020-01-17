@@ -25,7 +25,7 @@ module.exports = {
 	0: { // Warrior
 		"*": { consumeAbnormal: 104110 },
 		1: { // Combo Attack
-			"*": { 
+			"*": {
 				noInterrupt: [1],
 				abnormals: { 101750: { speed: 1.2 } }
 			},
@@ -85,14 +85,13 @@ module.exports = {
 			0: false
 		},
 		16: { // Charging Slash
-			'*': { noInterrupt: [2, 10, 22, 29, 30, 32, 37, 38, 40, 41] },
 			0: {
 				fixedSpeed: true,
 				length: 1100,
 				distance: 467.88,
 				noRetry: true
 			},
-			1: true
+			1: { noInterrupt: [2, 10, "16-1", 32, 40, 41] }
 		},
 		17: { // Vortex Slash
 			0: true,
@@ -130,10 +129,10 @@ module.exports = {
 			}
 		},
 		23: { // Spinning Counter
-			0: { 
+			0: {
 				requiredBuff: 100700,
 				abnormals: { 100299: { disableSkill: true } }
-			 }
+			}
 		},
 		24: { // Smoke Aggressor
 			0: { fixedSpeed: true }
@@ -180,7 +179,7 @@ module.exports = {
 		30: { // Scythe
 			'*': { hasChains: true },
 			0: {
-				noInterrupt: [1, 3, 5, 8, 9, 10, 13, 16, 17, 18, 19, 21, 22, 23, 27, 28, 30, 31, 34, 35, 38, 39, 41, 42],
+				noInterrupt: [1, 3, 5, 8, 9, 10, 13, 16, 17, 18, 19, 21, 22, 23, 28, 30, 31, 34, 35, 38, 39, 41, 42],
 				categoryChains: {
 					1002: 30,
 					1004: 30,
@@ -208,7 +207,7 @@ module.exports = {
 			}
 		},
 		34: { // Binding Sword
-			0: { noInterrupt: [1, 2, 3, 4, 5, 10, 11, 12, 13, 16, 17, 18, 19, 20, 21, 22, 23, 28, 29, 30, 31, 33, 35, 36, 37, 38, 39, 41, 42] }
+			0: { noInterrupt: [1, 2, 3, 4, 5, 10, 11, 12, 13, 16, 17, 18, 19, 20, 21, 22, 23, 28, 29, 30, 31, 33, 34, 35, 36, 37, 38, 39, 41, 42] }
 		},
 		35: { // Infuriate
 			0: { requiredBuff: [100200, 100201] }
@@ -291,8 +290,8 @@ module.exports = {
 		},
 		42: { // Blade Frenzy
 			'*': {
-				noInterrupt: [1, 3, 4, 5, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19, 21, 22, 23, 28, 29, 31, 33, 34, 35, 36, 37, 39, 40, '41-0', '41-30', 42],
-				hasChains: true
+				hasChains: true,
+				noInterrupt: [1, 3, 4, 5, 8, 9, 10, 11, 12, 13, 16, 17, 18, 19, 21, 22, 23, 28, 29, 31, 32, 33, 34, 35, 36, 37, 39, '41-0', '41-30', 42]
 			},
 			0: {
 				categoryChains: {
@@ -306,27 +305,26 @@ module.exports = {
 	},
 	1: { // Lancer
 		1: { // Combo Attack
-			'*': { noInterrupt: [1, 2] },
+			'*': { noInterrupt: [1] },
 			0: true,
 			1: true,
 			2: true
 		},
 		2: { // Stand Fast
-			'*': {
+			"*": {
+
 				fixedSpeed: true,
 				stamina: 50,
-				level: {
-					1: { stamina: 40 }
-				},
-				noRetry: true
+				noRetry: true,
+				level: { 1: { stamina: 40 } }
 			},
 			0: true,
 			30: true,
-			40: { stamina: 37 }
+			40: { level: { 1: { stamina: 37 } } }
 		},
 		3: { // Onslaught
 			'*': {
-				noInterrupt: [2, 3, 4, 8, 9, 10, 11, 12, 13, 15, 21, 23, 24, 25, 26, 27, 28, 29],
+				noInterrupt: [3, 4, 8, 9, 10, 11, 12, 13, 15, 21, 23, 24, 25, 26, 27, 28, 29],
 				abnormals: { 22060: { speed: 1.25 } }
 			},
 			0: {
@@ -359,9 +357,7 @@ module.exports = {
 		},
 		5: { // Shield Bash
 			1: true,
-			2: {
-				chains: { 10: 30 }
-			},
+			2: { chains: { 10: 30 } },
 			30: true
 		},
 		7: { // Guardian Shout
@@ -374,7 +370,11 @@ module.exports = {
 			0: true
 		},
 		10: { // Debilitate
-			'*': { noInterrupt: [3, 4, 5, 8, 9, 10, 11, 12, 13, 15, 21, 23, 24, 25, 26, 27, 28, 29] },
+			"*": {
+				triggerAbnormal: { 201830: 2000 },
+				consumeAbnormalEnd: 201830,
+				noInterrupt: [3, 4, 5, 8, 9, 10, 11, 12, 13, 15, 21, 23, 24, 25, 26, 27, 28, 29]
+			},
 			0: {
 				chains: {
 					1: 30,
@@ -412,9 +412,8 @@ module.exports = {
 				fixedSpeed: true,
 				length: 1125,
 				distance: 474.5,
-				noInterrupt: [15]
 			},
-			1: { noInterrupt: [2, "15-1", 25, 28] }
+			1: { noInterrupt: [2, '15-1', 25, 28] }
 		},
 		16: { // Second Wind
 			0: { fixedSpeed: true }
@@ -428,11 +427,7 @@ module.exports = {
 				consumeAbnormalEnd: 201831,
 				noInterrupt: [18]
 			},
-			0: {
-				abnormals: {
-					201550: { speed: 1.2 }
-				}
-			},
+			0: { abnormals: { 201550: { speed: 1.2 } } },
 			1: true
 		},
 		19: { // Pledge of Protection
@@ -456,6 +451,7 @@ module.exports = {
 			0: { requiredBuff: 201000 }
 		},
 		24: { // Chained Leash
+			"*": { consumeAbnormal: 201803 },
 			1: true,
 			2: true
 		},
@@ -526,7 +522,7 @@ module.exports = {
 			},
 			1: true,
 			2: {
-				noInterrupt: [1, 2, 3, 4, 6, 8, 9, 10, 12, 13, 15, 16, 17, 18, 21, 22, 23, 24, 25, 26, 28],
+				noInterrupt: [1, 2, 3, 4, 6, 8, 9, 10, 12, 13, 15, 16, 17, 18, 21, 22, 23, 24, 25, 26, '28-1', '28-2', '28-3'],
 				chains: { 14: 30, 27: 30 }
 			},
 			30: true
@@ -543,7 +539,7 @@ module.exports = {
 			1: true,
 			2: {
 				interruptAllWithAbnormal: { 301604: 3 },
-				noInterrupt: [1, 2, 3, 4, 6, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 21, 22, 23, 24, 25, 26, 27, 28], // 28-0 should be valid, any other ids not
+				noInterrupt: [1, 2, 3, 4, 6, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 21, 22, 23, 24, 25, 26, 27, 28],
 				abnormals: { 301604: { chain: 30 } },
 				chains: { 27: 30 },
 
@@ -589,7 +585,7 @@ module.exports = {
 			0: {
 				length: 3375.7,
 				interruptAllWithAbnormal: { 301604: null },
-				noInterrupt: ["1-0", "1-1", "1-2", 4, 6, 8, 10, "14-0", "14-1", 17, 18, 21, 23, 25, 26, 28],
+				noInterrupt: ["1-0", "1-1", "1-2", 4, 6, 8, 10, "14-0", "14-1", 17, 18, 21, 23, 25, 26, '28-1', '28-2', '28-3'],
 				abnormals: { 301604: { chain: 30 } },
 				chains: {
 					1: 30,
@@ -625,7 +621,7 @@ module.exports = {
 			1: true,
 			2: {
 				interruptAllWithAbnormal: { 301604: 12 },
-				noInterrupt: [1, 2, 3, 4, 6, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 21, 22, 23, 24, 25, 26, 27, 28], // 28-0 should be valid, any other ids not
+				noInterrupt: [1, 2, 3, 4, 6, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 21, 22, 23, 24, 25, 26, 27, 28],
 				abnormals: { 301604: { chain: 30 } },
 				chains: { 27: 30 },
 			},
@@ -691,7 +687,7 @@ module.exports = {
 			0: {
 				length: 3691.25,
 				interruptAllWithAbnormal: { 301604: 23 },
-				noInterrupt: [1, 2, 3, 4, 6, 9, 10, 12, 13, 14, 15, 16, 17, 18, 21, 22, 23, 28], // 28-0 should be valid, any other ids not
+				noInterrupt: [1, 2, 3, 4, 6, 9, 10, 12, 13, 14, 15, 16, 17, 18, 21, 22, 23, '28-1', '28-2', '28-3'],
 				abnormals: { 301604: { chain: 30 } },
 				chains: {
 					8: 30,
@@ -708,7 +704,7 @@ module.exports = {
 				length: 1941,
 				distance: 50,
 				interruptAllWithAbnormal: { 301604: 24 },
-				noInterrupt: ["1-0", "1-1", "1-2", 4, 6, 10, 14, 16, 17, 18, 21, 22, 23, 24, 26, 28], // 28-0 should be valid, any other ids not
+				noInterrupt: ["1-0", "1-1", "1-2", 4, 6, 10, 14, 16, 17, 18, 21, 22, 23, 24, 26, '28-1', '28-2', '28-3'],
 				abnormals: { 301604: { chain: 30 } },
 				chains: {
 					1: 30,
@@ -730,7 +726,7 @@ module.exports = {
 				length: [1078, 2166, 120],
 				distance: [40.51, 122.33, 11.21],
 				interruptAllWithAbnormal: { 301604: 26 },
-				noInterrupt: [1, 2, 3, 4, 6, 9, 10, 12, 13, 14, 15, 16, 17, 18, 21, 22, 26, 28], // 28-0 should be valid, any other ids not
+				noInterrupt: [1, 2, 3, 4, 6, 9, 10, 12, 13, 14, 15, 16, 17, 18, 21, 22, 26, '28-1', '28-2', '28-3'],
 				abnormals: { 301604: { chain: 30 } },
 				chains: {
 					8: 30,
@@ -785,16 +781,13 @@ module.exports = {
 			3: true
 		},
 		2: { // Axe Block
-			'*': { consumeAbnormal: 401701 },
 			0: { fixedSpeed: true },
-			30: true,
+			30: { consumeAbnormal: 401701 },
 			31: { fixedSpeed: true }
 		},
 		3: { // Thunder Strike
 			'*': {
-				abnormals: {
-					24170: { speed: 1.25 }
-				}
+				abnormals: { 24170: { speed: 1.25 } }
 			},
 			0: {
 				noInterrupt: [2],
@@ -815,12 +808,12 @@ module.exports = {
 		},
 		4: { // Flatten
 			0: {
-				noInterrupt: [1, 2, '3-10', '3-11', '3-12', '3-13', 4, '10-10', '10-11', '10-12', 11, '10-13', '15-10', '15-11', '15-12', '15-13', '15-14', '18-10', '18-11', '18-12', '18-13', 24, 26, 28, 29, '32-0'],
+				noInterrupt: [1, 2, '3-10', '3-11', '3-12', '3-13', 4, '8-30', '10-10', '10-11', '10-12', 11, '10-13', 13, '15-10', '15-11', '15-12', '15-13', '15-14', 18, 24, 26, 28, 29, 30, '32-0'],
 				chains: {
 					6: 30,
 					25: 30,
 					31: 30,
-					32: 30,
+					32: 31,
 					34: 30,
 					35: 30,
 					36: 30,
@@ -908,7 +901,7 @@ module.exports = {
 		},
 		18: { // Lethal Strike
 			0: {
-				noInterrupt: [1, 2, 4, 6, 13, 18, 24, 25, 26, 27, 28, 29, 31, 34, 35, 36, 37],
+				noInterrupt: [1, 2, 4, 6, 13, 18, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 35, 36, 37],
 				chains: {
 					// Correct
 					/*
@@ -962,30 +955,46 @@ module.exports = {
 		},
 		25: { // Raze
 			0: { // TODO: ADD Axe block cancel
-				noInterrupt: [4, 6, '6-30', 11, '18-10', '18-11', '18-12', '18-13', 24, 26, 28, 29, '32-0'],
+				noInterrupt: [2, 4, 6, 8 - 30, 11, 13, 24, 25, 26, 27, 28, 29, '32-0', 34, 35, 36, 37],
+				interruptibleWithAbnormal: { 401404: 2 },
 				chains: {
 					1: 30,
-					3: 30,
-					10: 30,
-					'15-10': 30,
-					'15-11': 30,
-					'15-12': 30,
-					'15-13': 30,
-					'15-14': 30,
-					30: 30,
-					32: 30
+					"3-10": 30,
+					"3-11": 30,
+					"3-12": 30,
+					"3-13": 30,
+					"10-10": 30,
+					"10-11": 30,
+					"10-12": 30,
+					"10-13": 30,
+					"15-10": 30,
+					"15-11": 30,
+					"15-12": 30,
+					"15-13": 30,
+					"15-14": 30,
+					18: 30,
+					30: 31,
+					31: 30,
+					32: 31
 				}
 			},
 			1: {
 				chains: {
 					1: 31,
-					3: 31,
-					10: 31,
-					'15-10': 31,
-					'15-11': 31,
-					'15-12': 31,
-					'15-13': 31,
-					'15-14': 31,
+					"3-10": 30,
+					"3-11": 30,
+					"3-12": 30,
+					"3-13": 30,
+					"10-10": 30,
+					"10-11": 30,
+					"10-12": 30,
+					"10-13": 30,
+					"15-10": 30,
+					"15-11": 30,
+					"15-12": 30,
+					"15-13": 30,
+					"15-14": 30,
+					18: 30,
 					30: 31,
 					32: 31
 				}
@@ -999,7 +1008,13 @@ module.exports = {
 		27: { // Unbreakable
 			"*": { noInterrupt: [1, 2, '3-10', '3-11', '3-12', '3-13', 4, 6, '8-30', '10-10', '10-11', '10-12', '10-13', 11, 13, '15-10', '15-11', '15-12', '15-13', '15-14', 18, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33] },
 			0: {
-				interruptibleWithAbnormal: { 401705: 33 }
+				interruptibleWithAbnormal: { 401705: 33 },
+				chains: {
+					34: 30,
+					35: 30,
+					36: 30,
+					37: 30
+				}
 			},
 			30: true
 		},
@@ -1020,7 +1035,7 @@ module.exports = {
 		},
 		30: { // Axe Counter
 			'*': {
-				noInterrupt: [1, '3-10', '3-11', '3-12', '3-13', 4, 6, '8-30', '10-10', '10-11', '10-12', '10-13', 11, 12, 13, '15-10', '15-11', '15-12', '15-13', '15-14', '18-10', '18-11', '18-12', '18-13', 24, 25, 26, 27, 28, 29, 30, 31, 32],
+				noInterrupt: [1, '3-10', '3-11', '3-12', '3-13', 4, 6, '8-30', '10-10', '10-11', '10-12', '10-13', 11, 12, 13, '15-10', '15-11', '15-12', '15-13', '15-14', 18, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 35, 36, 37],
 				requiredBuff: 401402
 			},
 			0: true,
@@ -1036,7 +1051,7 @@ module.exports = {
 		},
 		32: { // Punishing Strike
 			"*": { noInterrupt: [32] },
-			0: true,
+			0: { requiredBuff: 401400 },
 			1: true
 		},
 		33: { // Unleash
@@ -1170,11 +1185,7 @@ module.exports = {
 			0: true
 		},
 		13: { // Mindblast
-			0: {
-				abnormals: {
-					25110: { speed: 1.4 }
-				}
-			}
+			0: { abnormals: { 25110: { speed: 1.4 } } }
 		},
 		14: { // Retaliate
 			0: false
@@ -1192,7 +1203,7 @@ module.exports = {
 			}
 		},
 		19: { // Mana Siphon
-			0: { autoRelease: 0 },
+			0: true,
 			10: { noRetry: true },
 			11: { noRetry: true },
 			12: { noRetry: true }
@@ -1205,9 +1216,7 @@ module.exports = {
 			},
 			10: {
 				type: 'lockonCast',
-				abnormals: {
-					25060: { speed: 1.25 }
-				}
+				abnormals: { 25060: { speed: 1.25 } }
 			}
 		},
 		21: { // Nerve Exhaustion
@@ -1256,7 +1265,6 @@ module.exports = {
 		},
 		26: { // Teleport Jaunt
 			0: {
-				noInterrupt: [26],
 				cooldownEnd: 300,
 				noRetry: true,
 				abnormals: {
@@ -1293,7 +1301,7 @@ module.exports = {
 			0: true
 		},
 		36: { // Fusion
-			'*': { noInterrupt: [1, 2, 3, 6, 7, 11, 12, 17, 18, 20, 36, 32, 30] },
+			'*': { noInterrupt: [1, 2, 3, '4-10', '4-11', '4-12', 5, 6, 7, 8, 10, 11, 12, 13, 14, 16, 17, 18, '19-10', '19-11', '19-12', '20-10', '21-10', '22-10', '23-10', '25-10', 26, 27, 28, 30, 31, 32, '33-10', '33-11', '33-12', '33-50', '33-51', '33-52', 34, 36, 39] },
 			0: true,
 			//20: true, // TODO: Needs S_SKILL_CATEGORY implementation (always disabled - non-critical)
 			30: true
@@ -1477,7 +1485,6 @@ module.exports = {
 		},
 		34: { // Wind Walk
 			'*': {
-				noInterrupt: [34],
 				stamina: 150,
 				instantStamina: true,
 				abnormals: {
@@ -1513,10 +1520,7 @@ module.exports = {
 			'*': {
 				abnormals: { 601450: { chargeSpeed: 0.5 } }
 			},
-			0: {
-				chargeLevels: [null, 360213],
-				autoRelease: 10
-			},
+			0: { chargeLevels: [null, 360213] },
 			13: { noRetry: true }
 		}
 	},
@@ -1558,7 +1562,7 @@ module.exports = {
 			},
 			30: true
 		},
-		5: { // Blessing of Shakan
+		5: { // Blessing of Shakan, Seren, Balder, Zenobia and Arachne
 			0: true
 		},
 		6: { // Arise
@@ -1601,7 +1605,7 @@ module.exports = {
 		},
 		16: { // Shocking Implosion
 			"*": {
-				triggerAbnormal: { 806104: 1480 }, 
+				triggerAbnormal: { 806104: 1480 },
 				noInterrupt: [2, 3, 5, 10, 12, 14, 16, 18, "19-10", 25, 26, 28, 29, "30-10", "33-10", 34, "35-10", "37-10", 38, 40, "41-10", 42]
 			},
 			0: {
@@ -1832,7 +1836,7 @@ module.exports = {
 		},
 		8: { // Metamorphic Blast
 			0: {
-				noInterrupt: [1, 2, 4, 5-10, 6, 9-10, 10, 13, 14, 15, 16, 17, 21, 18-10, 22-10, 37, 41-10, 43, 48],
+				noInterrupt: [1, 2, 4, '5-10', 6, '9-10', 10, 13, 14, 15, 16, 17, 21, '18-10', '22-10', 37, '41-10', 43, 48],
 				checkReset: true,
 				chains: {
 					8: 30,
@@ -1914,7 +1918,6 @@ module.exports = {
 				chargeLevels: [10, 10],
 				noInterrupt: [18],
 				noRetry: true,
-				//autoRelease: 0,
 				abnormals: {
 					27070: { chargeSpeed: 0.25 },
 					27080: { chargeSpeed: 0.25 }
@@ -1932,14 +1935,13 @@ module.exports = {
 			0: {
 				chargeLevels: [10, 10],
 				noRetry: true,
-				//autoRelease: 0,
 				abnormals: {
 					27100: { chargeSpeed: 0.25 }
 				}
 			},
 			10: { noRetry: true }
 		},
-		23: { // Metmorphic Smite
+		23: { // Metamorphic Smite
 			0: {
 				noInterrupt: [1, 2, 4, "5-10", 6, "9-10", 10, 13, 14, 15, 16, 17, "18-10", 21, "22-10", 23, 37, "41-10", 43, 48],
 				chains: { 8: 30 }
@@ -2074,7 +2076,7 @@ module.exports = {
 		'*': { consumeAbnormal: [10151020, 10151021, 10151022, 10151023, 10151040, 10151041, 10151042] },
 		1: { // Spiral Barrage
 			'*': {
-				noInterrupt: [3, 4, 12, 20],
+				noInterrupt: [3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15, 18, 19, 20, 21, 23, 40],
 				inPlace: {
 					animSeq: [{
 						duration: 766,
@@ -2175,9 +2177,7 @@ module.exports = {
 					}],
 					distance: 0
 				},
-				abnormals: {
-					29030: { speed: 1.25 }
-				}
+				abnormals: { 29030: { speed: 1.25 } }
 			},
 			0: {
 				chains: {
@@ -2523,14 +2523,14 @@ module.exports = {
 			81: true
 		},
 		16: { // Shadow Reaping
-			0: { 
+			0: {
 				fixedSpeed: true,
 				noInterrupt: [16],
 			}
 		},
 		19: { // Dark Harvest
 			'*': {
-				triggerAbnormal: { 
+				triggerAbnormal: {
 					10151250: 3000,
 					10151230: 10000
 				},
@@ -2750,7 +2750,7 @@ module.exports = {
 		},
 		5: { // Burst Fire / Targeted Burst Fire
 			'*': { noInterrupt: ['9-0', '9-10', '9-20'] },
-			0: { 
+			0: {
 				noRetry: true,
 				noInterrupt: [5]
 			},
@@ -2813,7 +2813,6 @@ module.exports = {
 			'*': { moveDir: 1 },
 			0: {
 				noInterrupt: [20],
-				autoRelease: 0,
 				level: {
 					9: {
 						releaseChain: {
@@ -3518,7 +3517,7 @@ module.exports = {
 			}
 		},
 		4: { // Ground Pound
-			'*': { 
+			'*': {
 				hasChains: true,
 				noInterrupt: [4]
 			},
@@ -3582,7 +3581,7 @@ module.exports = {
 			0: false
 		},
 		13: { // Provoke
-			'*': { 
+			'*': {
 				fixedSpeed: true,
 				noInterrupt: [13, 40]
 			},
@@ -3643,7 +3642,7 @@ module.exports = {
 			30: true
 		},
 		24: { // One-Inch Punch
-			'*': { 
+			'*': {
 				hasChains: true,
 				noInterrupt: [24]
 			},
@@ -4072,7 +4071,7 @@ module.exports = {
 			30: { triggerAbnormal: { 10155070: 5000 } }
 		},
 		8: { // Titansbane
-			'*': { 
+			'*': {
 				hasChains: true,
 				noInterrupt: ['8-1']
 			},
