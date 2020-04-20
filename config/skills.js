@@ -1640,7 +1640,23 @@ module.exports = {
 				fixedSpeed: true,
 				abnormals: { 805800: { disableSkill: true } }
 			},
-			10: { type: 'lockonCast' }
+			10: {
+				type: 'lockonCast',
+				level: {
+					29: {
+						fixedSpeed: true,
+						cooldownEnd: 100 // Workaround: Fixes ghosting while on CD - TODO: Enable global cooldown checks
+					},
+					30: {
+						fixedSpeed: true,
+						cooldownEnd: 100 // Workaround: Fixes ghosting while on CD - TODO: Enable global cooldown checks
+					},
+					31: {
+						fixedSpeed: true,
+						cooldownEnd: 100 // Workaround: Fixes ghosting while on CD - TODO: Enable global cooldown checks
+					}
+				}
+			}
 		},
 		22: { // Kaia's Shield
 			0: { abnormals: { 805800: { disableSkill: true } } }
