@@ -670,9 +670,11 @@ module.exports = {
 			0: true,
 			50: true
 		},
+		/*
 		19: { // Tenacity
 			0: { fixedSpeed: true }
 		},
+		*/
 		20: { // In Cold Blood
 			0: {
 				fixedSpeed: true,
