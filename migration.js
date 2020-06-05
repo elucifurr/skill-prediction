@@ -23,9 +23,9 @@ const DefaultSettings = {
 		defendSuccessStrict:	true	//	[Brawler] Set this to false to see the Perfect Block icon at very high ping (warning: may crash client).
 	},
 	ping: {
-		interval:	6000,	//	Interval between pings. Recommended 2000-3000ms for WiFi or unstable connections, 6000ms for wired.
+		interval:	4300,	//	Interval between pings. Recommended 2000-3000ms for WiFi or unstable connections, 6000ms for wired.
 		timeout:	30000,	//	Milliseconds to wait before giving up and retrying ping.
-		maxHistory: 20		//	Maximum number of ping samples used to calculate min/max/avg values.
+		maxHistory: 30		//	Maximum number of ping samples used to calculate min/max/avg values.
 	},
 	debug: {
 		skills:			false,
