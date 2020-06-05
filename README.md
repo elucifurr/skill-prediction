@@ -1,5 +1,5 @@
 ### This is not SaltyMonkey's SP
-This is just a fork of Pinkie Pie's original SP, ported over to be compatible with Caali's tera-proxy.  
+This is just a fork of Pinkie Pie's original SP with basic fixes, ported over to be compatible with TeraToolbox.  
 If anything bugs, doesn't work or just sucks, please report the problem directly to Pinkie Pie.  
   
 That being said, here is the rest of the readme:  
@@ -10,7 +10,7 @@ That being said, here is the rest of the readme:
 ## Skill Prediction
 Simulates skills client-side, eliminating ping-based delays and animation lock.
 
-**Note**: Skill Prediction does **not** reduce your actual ping to the server. If you wish to have lower ping in general, consider renting an optimized gaming VPN such as [Mudfish](https://mudfish.net/), [Pingzapper](https://pingzapper.com/) or [WTFast](https://www.wtfast.com/).
+**Note**: Skill Prediction does **not** reduce your actual ping to the server. If you wish to have lower ping in general, consider renting an optimized gaming VPN such as [Mudfish](https://mudfish.net/), [Pingzapper](https://pingzapper.com/) or [WTFast](https://www.wtfast.com/) or different ones.
 
 ### Troubleshooting
 #### Delayed skills:
@@ -25,7 +25,7 @@ Simulates skills client-side, eliminating ping-based delays and animation lock.
 	"retryMs": 60,
 },
 "ping": {
-	"interval": 3000,
+	"interval": 3300,
 }
 ```
 
