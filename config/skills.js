@@ -761,7 +761,7 @@ module.exports = {
 		10: { // Cyclone
 			0: {
 				overcharge: 365,
-				noChargeAbnormalityId: 401701
+				noChargeAbnormalityId: 401701,
 				noRetry: true
 			},
 			10: { noRetry: true },
