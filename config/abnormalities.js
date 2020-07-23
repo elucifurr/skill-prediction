@@ -1,13 +1,9 @@
 module.exports = {
-	
 	/* Warrior */
 	105100: true, // Aerial Scythe
 
-	/* Lancer */
-	201831: true, // peepee hard
-
 	/* Slayer */
-	23220: true, // Distant Blade
+	//23220: true, // Distant Blade (duration)
 	// Savage Strike
 	301600: true,
 	301601: true,
@@ -19,10 +15,6 @@ module.exports = {
 	10151021: true,
 	10151022: true,
 	10151023: true,
-
-	// Dark Harvest
-	10151250: true, // stuff thingy
-	10151230: true, // effect thingy
 
 	/* Gunner */
 	10152010: true, // Time Bomb (soft chain)
