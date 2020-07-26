@@ -1,7 +1,7 @@
 {
 	"files": {
 		"LICENSE": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2",
-		"README.md": "b56c68250fb2098f2c7b339d9b24decdee18347efc97614362557a159594ecf7",
+		"README.md": "1c07692e52fbaab77ce0f50f6df8ab9aac4819c2b161f343ccaf37db50451ea7",
 		"config/abnormalities.js": "037460fe381086236482aeb6ab7b812155a3370c67aebae97e5665ac399fac8e",
 		"config/skills.js": "97df089ec72eb74108ecc437980e3c7035d769fa2f65424258e82a59052e38a1",
 		"lib/abnormalities.js": "cd4195728c6f57b0d55a4b85368512d7bdf99c8693d0c891d7233a82218df645",
