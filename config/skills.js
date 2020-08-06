@@ -3224,6 +3224,7 @@ module.exports = {
 			}
 		},
 		3: { // Divine Wrath
+			/*
 			'*': {
 				ignoreAttackSpeed: true,
 				noRetry: true
@@ -3234,6 +3235,7 @@ module.exports = {
 				forceClip: true,
 				setEndpointStage: 1
 			}
+			*/
 		},
 		4: { // Ground Pound
 			'*': {
