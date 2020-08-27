@@ -3,11 +3,11 @@
 		"LICENSE": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2",
 		"README.md": "1c07692e52fbaab77ce0f50f6df8ab9aac4819c2b161f343ccaf37db50451ea7",
 		"config/abnormalities.js": "037460fe381086236482aeb6ab7b812155a3370c67aebae97e5665ac399fac8e",
-		"config/skills.js": "9c402b5d4ad73c0ddae371ca9f7880a2f3e287ecf982315f1297aea3166f0acc",
+		"config/skills.js": "0276bb4e055edb5fa5e9e0694d9f3ec4a982fb2c4e85f845e3dcb85cc4ed434e",
 		"lib/abnormalities.js": "cd4195728c6f57b0d55a4b85368512d7bdf99c8693d0c891d7233a82218df645",
 		"lib/commands.js": "88ad8919eb166a7cd0cba4aae9a3c2981219f45f486f97a4ec63d4ef48feb095",
 		"lib/cooldowns.js": "d0d055bd6a8a45d4dfe10e1c7e7802e39a2c8eab01d111d087768d587a7c5f2d",
-		"lib/core.js": "056fc422d45f0cadf1b3585f00fc8936609713f0c91b3b8dba15a79bcfca8c28",
+		"lib/core.js": "c12fa41d2d386ec4d6e4eb137936307ba42de12fd0911fbf73e4fd8a196078f0",
 		"lib/debug.js": "e588440fd11eb3d7eb84b15789df92b7f15d9d560ec2f7ef8597c384e402efb7",
 		"lib/index.js": "dded72ea79f9aa060722e1d904a6e842fbca80315fdbcdf6bdda8fa38f8e96fa",
 		"lib/ping.js": "72685743a006c63a839fdff8f9b448e3e31ccfda534acbd3c1396f5eb4e8e994",
@@ -21,6 +21,7 @@
 		"client_data/noctan.json": "b7bf4bc91a06ee3563fd839622551894070e8d3d987973e07bbe7c9a71a4b5b3",
 		"client_data/passivity.json": "71d14e07391fdc146fbe7822d8a710497cf4a7959f1e27ebca634493f478d5e7",
 		"client_data/polishing.json": "0c96e135535b1ee6bcc04407d81cf50552ce2eca23ebeeea31ffe5531776098e",
-		"client_data/skills.json": "e09a392aa96dcd06efb415314d8528da2c18c39f75721471725231d85ea2f235"
+		"client_data/skills.json": "e09a392aa96dcd06efb415314d8528da2c18c39f75721471725231d85ea2f235",
+		"config/skills_old.js": "9c402b5d4ad73c0ddae371ca9f7880a2f3e287ecf982315f1297aea3166f0acc"
 	}
 }
