@@ -2478,9 +2478,11 @@ module.exports = {
 			30: { noRetry: true }
 		},
 		5: { // Burst Fire / Targeted Burst Fire
-			'*': { noInterrupt: ['9-0', '9-10', '9-20'] },
-			0: {
+			'*': { 
 				noRetry: true,
+				noInterrupt: ['9-0', '9-10', '9-20'] 
+			},
+			0: {
 				noInterrupt: [5]
 			},
 			1: {
@@ -3173,12 +3175,19 @@ module.exports = {
 					92024: 30,
 					92026: 30,
 					92040: 30
+				},
+				level: {
+					10: { ignoreAttackSpeed: true }
 				}
 			},
 			1: true,
 			2: true,
 			3: true,
-			30: true,
+			30: {
+				level: {
+					10: { ignoreAttackSpeed: true }
+				}
+			},
 			31: true,
 			32: true
 		},
