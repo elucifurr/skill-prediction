@@ -11,7 +11,7 @@
 		"lib/debug.js": "e588440fd11eb3d7eb84b15789df92b7f15d9d560ec2f7ef8597c384e402efb7",
 		"lib/index.js": "dded72ea79f9aa060722e1d904a6e842fbca80315fdbcdf6bdda8fa38f8e96fa",
 		"lib/ping.js": "72685743a006c63a839fdff8f9b448e3e31ccfda534acbd3c1396f5eb4e8e994",
-		"lib/player.js": "7fbeed9cd2bf7f9a5ed2eafaaff9c754cfed7fc01948050df06f901958e848db",
+		"lib/player.js": "5b55c2991893743ad4fe30a85a59080c12cfe5aec1d3ddc74ae2eff7fc048b84",
 		"lib/require.js": "d8fcd57f21ba1cea3d474688c994804b21676c6a4cb6a9dbc4ed929c79a37dac",
 		"migration.js": "b7479525dd7257af68594063227698a7ab4a752688024368ef5e740b0700a9ed",
 		"module.json": "f3eafb55a8ac3262f8a05130ac3d52f8c7f0c28e158305cc20a080d5b404d45c",
